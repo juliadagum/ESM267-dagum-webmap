@@ -31,15 +31,15 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="data/StudyAreastudyArea_2.js"></script>
-        <script src="data/PiedrasBlancasNationalPark_3.js"></script>
-        <script src="data/LaAmistadNationalPark_4.js"></script>
+        <script src="data/LaAmistadInternationalPeacePark_3.js"></script>
+        <script src="data/PiedrasBlancasNationalPark_4.js"></script>
         <script src="data/CorcovadoNationalPark_5.js"></script>
         <script src="data/MinorRoads_6.js"></script>
         <script src="data/PanamericanHighway_7.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[7.89836218978695,-83.92096463141702],[9.363642790194161,-82.28487276175095]]);
+        }).fitBounds([[7.954951270220785,-84.51641755168248],[9.61985620923466,-82.64205109813939]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -82,7 +82,7 @@
                 weight: 3.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,120,180,1.0)',
+                fillColor: 'rgba(31,120,180,0.7176470588235294)',
                 interactive: true,
             }
         }
@@ -100,14 +100,46 @@
         });
         bounds_group.addLayer(layer_StudyAreastudyArea_2);
         map.addLayer(layer_StudyAreastudyArea_2);
-        function pop_PiedrasBlancasNationalPark_3(feature, layer) {
+        function pop_LaAmistadInternationalPeacePark_3(feature, layer) {
         }
 
-        function style_PiedrasBlancasNationalPark_3_0() {
+        function style_LaAmistadInternationalPeacePark_3_0() {
             return {
-                pane: 'pane_PiedrasBlancasNationalPark_3',
+                pane: 'pane_LaAmistadInternationalPeacePark_3',
                 opacity: 1,
                 color: 'rgba(0,28,78,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,28,78,0.8)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_LaAmistadInternationalPeacePark_3');
+        map.getPane('pane_LaAmistadInternationalPeacePark_3').style.zIndex = 403;
+        map.getPane('pane_LaAmistadInternationalPeacePark_3').style['mix-blend-mode'] = 'normal';
+        var layer_LaAmistadInternationalPeacePark_3 = new L.geoJson(json_LaAmistadInternationalPeacePark_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_LaAmistadInternationalPeacePark_3',
+            layerName: 'layer_LaAmistadInternationalPeacePark_3',
+            pane: 'pane_LaAmistadInternationalPeacePark_3',
+            onEachFeature: pop_LaAmistadInternationalPeacePark_3,
+            style: style_LaAmistadInternationalPeacePark_3_0,
+        });
+        bounds_group.addLayer(layer_LaAmistadInternationalPeacePark_3);
+        map.addLayer(layer_LaAmistadInternationalPeacePark_3);
+        function pop_PiedrasBlancasNationalPark_4(feature, layer) {
+        }
+
+        function style_PiedrasBlancasNationalPark_4_0() {
+            return {
+                pane: 'pane_PiedrasBlancasNationalPark_4',
+                opacity: 1,
+                color: 'rgba(0,28,78,0.8)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -118,52 +150,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_PiedrasBlancasNationalPark_3');
-        map.getPane('pane_PiedrasBlancasNationalPark_3').style.zIndex = 403;
-        map.getPane('pane_PiedrasBlancasNationalPark_3').style['mix-blend-mode'] = 'normal';
-        var layer_PiedrasBlancasNationalPark_3 = new L.geoJson(json_PiedrasBlancasNationalPark_3, {
+        map.createPane('pane_PiedrasBlancasNationalPark_4');
+        map.getPane('pane_PiedrasBlancasNationalPark_4').style.zIndex = 404;
+        map.getPane('pane_PiedrasBlancasNationalPark_4').style['mix-blend-mode'] = 'normal';
+        var layer_PiedrasBlancasNationalPark_4 = new L.geoJson(json_PiedrasBlancasNationalPark_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_PiedrasBlancasNationalPark_3',
-            layerName: 'layer_PiedrasBlancasNationalPark_3',
-            pane: 'pane_PiedrasBlancasNationalPark_3',
-            onEachFeature: pop_PiedrasBlancasNationalPark_3,
-            style: style_PiedrasBlancasNationalPark_3_0,
+            dataVar: 'json_PiedrasBlancasNationalPark_4',
+            layerName: 'layer_PiedrasBlancasNationalPark_4',
+            pane: 'pane_PiedrasBlancasNationalPark_4',
+            onEachFeature: pop_PiedrasBlancasNationalPark_4,
+            style: style_PiedrasBlancasNationalPark_4_0,
         });
-        bounds_group.addLayer(layer_PiedrasBlancasNationalPark_3);
-        map.addLayer(layer_PiedrasBlancasNationalPark_3);
-        function pop_LaAmistadNationalPark_4(feature, layer) {
-        }
-
-        function style_LaAmistadNationalPark_4_0() {
-            return {
-                pane: 'pane_LaAmistadNationalPark_4',
-                opacity: 1,
-                color: 'rgba(0,28,78,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 3.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(0,28,78,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_LaAmistadNationalPark_4');
-        map.getPane('pane_LaAmistadNationalPark_4').style.zIndex = 404;
-        map.getPane('pane_LaAmistadNationalPark_4').style['mix-blend-mode'] = 'normal';
-        var layer_LaAmistadNationalPark_4 = new L.geoJson(json_LaAmistadNationalPark_4, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_LaAmistadNationalPark_4',
-            layerName: 'layer_LaAmistadNationalPark_4',
-            pane: 'pane_LaAmistadNationalPark_4',
-            onEachFeature: pop_LaAmistadNationalPark_4,
-            style: style_LaAmistadNationalPark_4_0,
-        });
-        bounds_group.addLayer(layer_LaAmistadNationalPark_4);
-        map.addLayer(layer_LaAmistadNationalPark_4);
+        bounds_group.addLayer(layer_PiedrasBlancasNationalPark_4);
+        map.addLayer(layer_PiedrasBlancasNationalPark_4);
         function pop_CorcovadoNationalPark_5(feature, layer) {
         }
 
@@ -178,7 +178,7 @@
                 weight: 3.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(0,28,78,1.0)',
+                fillColor: 'rgba(0,28,78,0.803921568627451)',
                 interactive: true,
             }
         }
@@ -257,7 +257,7 @@
         bounds_group.addLayer(layer_PanamericanHighway_7);
         map.addLayer(layer_PanamericanHighway_7);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/PanamericanHighway_7.png" />  Panamerican Highway': layer_PanamericanHighway_7,'<img src="legend/MinorRoads_6.png" />  Minor Roads': layer_MinorRoads_6,'<img src="legend/CorcovadoNationalPark_5.png" />  Corcovado National Park': layer_CorcovadoNationalPark_5,'<img src="legend/LaAmistadNationalPark_4.png" />  La Amistad National Park': layer_LaAmistadNationalPark_4,'<img src="legend/PiedrasBlancasNationalPark_3.png" />  Piedras Blancas National Park': layer_PiedrasBlancasNationalPark_3,'<img src="legend/StudyAreastudyArea_2.png" /> Study Area studyArea': layer_StudyAreastudyArea_2,"Land Use and Land Cover Classifications": layer_LandUseandLandCoverClassifications_1,"ESRI National Geographic": layer_ESRINationalGeographic_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/PanamericanHighway_7.png" />  Panamerican Highway': layer_PanamericanHighway_7,'<img src="legend/MinorRoads_6.png" />  Minor Roads': layer_MinorRoads_6,'<img src="legend/CorcovadoNationalPark_5.png" />  Corcovado National Park': layer_CorcovadoNationalPark_5,'<img src="legend/PiedrasBlancasNationalPark_4.png" />  Piedras Blancas National Park': layer_PiedrasBlancasNationalPark_4,'<img src="legend/LaAmistadInternationalPeacePark_3.png" />  La Amistad International Peace Park': layer_LaAmistadInternationalPeacePark_3,'<img src="legend/StudyAreastudyArea_2.png" /> Study Area studyArea': layer_StudyAreastudyArea_2,"Land Use and Land Cover Classifications": layer_LandUseandLandCoverClassifications_1,"ESRI National Geographic": layer_ESRINationalGeographic_0,},{collapsed:false}).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function () {
